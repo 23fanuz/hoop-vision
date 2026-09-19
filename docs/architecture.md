@@ -15,12 +15,26 @@ The first version has four main parts:
 
 ## Data Flow
 
-```text
-Synthetic JSON Fixture
-        ↓
-Analytics Engine
-        ↓
-FastAPI Backend
-        ↓
-React Dashboard
+```mermaid
+flowchart LR
+        events["Synthetic JSON events"]
+
+        subgraph backend["Backend"]
+                core["Analytics engine"] -->|lineups and impact metrics| api["FastAPI"]
+        end
+
+        events -->|game events| core
+        api -->|JSON results| web["React dashboard"]
 ```
+
+Arrows indicate result data flow.
+
+
+## Future Phases
+
+Later versions may add:
+
+- Video ingestion
+- Async jobs
+- Queues
+- Streaming updates
