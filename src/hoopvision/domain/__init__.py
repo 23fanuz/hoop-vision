@@ -12,6 +12,7 @@ from hoopvision.domain.models import (
     Substitution,
     Team,
 )
+from hoopvision.domain.lineups import LineupReconstructionError, reconstruct_lineups
 
 __all__ = [
     "EventType",
@@ -19,9 +20,11 @@ __all__ = [
     "GameEvent",
     "ImpactSummary",
     "LineupSnapshot",
+    "LineupReconstructionError",
     "Player",
     "PossessionEstimate",
     "Score",
     "Substitution",
     "Team",
+    "reconstruct_lineups",
 ]
