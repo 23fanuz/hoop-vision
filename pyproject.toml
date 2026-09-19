@@ -1,0 +1,17 @@
+[project]
+name = "hoopvision"
+version = "0.1.0"
+description = "Basketball analytics learning project"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
